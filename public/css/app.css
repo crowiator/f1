@@ -1,11 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
-/*!
- * Bootstrap v4.6.1 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
 :root {
   --blue: #3490dc;
   --indigo: #6574cd;
@@ -10019,86 +10013,5 @@ h3 {
     border-color: #dee2e6;
   }
 }
-.navbar, footer {
-  background-color: #ff3333;
-}
 
-.logo {
-  max-width: 9.375rem;
-  height: auto;
-}
-
-.navbar-light .navbar-nav .nav-link {
-  font-size: 22px;
-  font-weight: bold;
-  color: #000000;
-}
-
-a.nav-link:hover {
-  color: white;
-}
-
-.dropdown-item > img {
-  width: 130px;
-  height: auto;
-}
-
-.dropdown-item {
-  text-align: left;
-}
-
-bi bi-facebook, bi bi-twitter, bi bi-youtube, bi bi-instagram {
-  font-size: 3rem;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: white;
-}
-
-.clanok:nth-child(2n) {
-  background-color: #ff4d4d;
-  color: white;
-}
-
-.card-text img {
-  width: 20%;
-}
-
-.card-body {
-  color: black;
-  background-color: snow;
-}
-
-.nazovTabulky, .nazov {
-  font-weight: bold;
-}
-
-.karta {
-  margin-top: 100px;
-}
-
-.nadpis, .nadpis_hlavny {
-  margin-top: 40px;
-  font-weight: bold;
-  color: #b30000;
-  text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
-}
-
-.nadpis_hlavny {
-  font-size: 50px;
-}
-
-#carouselExampleCaptions {
-  margin-bottom: 20px;
-}
-.full {
-    font-weight: bold;
-    font-size: 1.4rem;
-}
 

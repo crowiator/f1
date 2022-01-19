@@ -55,16 +55,16 @@
                             Tímy
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#"><img src="pics/teams/alfa.png" alt="">Alfa Romeo</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="pics/teams/alpha.png" alt="">AlphaTauri</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="pics/teams/alpine.png" alt="">Alpine</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="pics/teams/aston.png" alt="">Aston Martin</a></li>
-                            <li><a class="dropdown-item" href="ferrari.php"><img src="pics/teams/ferrari.png" alt="">Ferrari</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="pics/teams/haas.png" alt="">Haas</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="pics/teams/McLaren.png" alt="">McLaren</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="pics/teams/mercedes.png" alt="">Mercedes</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="pics/teams/redbull.png" alt="">Red Bull</a></li>
-                            <li><a class="dropdown-item" href="#"><img src="pics/teams/wiliams.png" alt="">Wiliams</a></li>
+                            <li><a class="dropdown-item" href="#">Alfa Romeo</a></li>
+                            <li><a class="dropdown-item" href="#">AlphaTauri</a></li>
+                            <li><a class="dropdown-item" href="#">Alpine</a></li>
+                            <li><a class="dropdown-item" href="#">Aston Martin</a></li>
+                            <li><a class="dropdown-item" href="ferrari.php">Ferrari</a></li>
+                            <li><a class="dropdown-item" href="#">Haas</a></li>
+                            <li><a class="dropdown-item" href="#">McLaren</a></li>
+                            <li><a class="dropdown-item" href="#">Mercedes</a></li>
+                            <li><a class="dropdown-item" href="#">Red Bull</a></li>
+                            <li><a class="dropdown-item" href="#">Wiliams</a></li>
                         </ul>
                     </li>
                 </ul>

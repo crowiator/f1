@@ -51,9 +51,7 @@
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
-                            <script>
 
-                            </script>
 
                         </div>
                     </div>

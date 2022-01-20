@@ -27,4 +27,7 @@ Route::get('/', [App\Http\Controllers\EventController::class, 'index'])->name('i
 Route::get('races',[RaceController::class,'index']);
 Route::get('fetch-races',[RaceController::class,'fetchrace']);
 Route::post('races',[RaceController::class,'store']);
+Route::get ('edit-race/{id}',[RaceController::class,'edit']);
+Route::put('update-race/{id}',[RaceController::class,'update']);
+Route::delete('delete-race/{id}',[RaceController::class,'destroy']);
 

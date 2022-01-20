@@ -1,4 +1,4 @@
-@extends('events.layout')
+@extends('layouts.app')
 
 @section('content')
     <link href="{{ asset('css/eventIndex.css') }}" rel="stylesheet">

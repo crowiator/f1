@@ -14,5 +14,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(6)->create()->each(function ($user){
+            for ($i = 0; $i < 6; $i++){
+                $user->comments()->save(\App\Models\Comment::factory()->make());
+            }
+        });
     }
 }

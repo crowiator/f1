@@ -44,6 +44,14 @@
                             </table>
                             <h5>Description</h5>
                             <p>{{ \Str::limit($value->description, 100) }}</p>
+                            <div class="footer_article">
+                                <a href="/users/{{$value->user->id}}" class="author">
+                                    <strong>Author: {{$value->user->name}}</strong>
+                                </a>
+                                <!--  -->
+
+
+                            </div>
                             <form action="{{ route('events.destroy',$value->id) }}" method="POST">
                                 <a class="btn btn-info" href="{{ route('events.show',$value->id) }}">Show</a>
                                 <a class="btn btn-primary" href="{{ route('events.edit',$value->id) }}">Edit</a>

@@ -5,7 +5,6 @@
         <article class="post">
             <header>
                 <h2 class=>
-
                     {{$post->title}}
                 </h2>
             </header>
@@ -23,7 +22,7 @@
 
                 </div>
             </footer>
-
         </article>
+        @include('comments.index')
     </div>
 @endsection

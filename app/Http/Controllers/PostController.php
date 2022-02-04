@@ -100,6 +100,7 @@ class PostController extends Controller
         $request->validate([
             'title' => 'required|min:2|string',
             'text' => 'required|min:2|string',
+            'slug' => 'required|min:2|string',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
@@ -117,8 +118,7 @@ class PostController extends Controller
         $post->update($input);
 
 
-        return redirect()->route('posts.index')
-            ->with('success','Event updated successfully');
+        return redirect()->route('posts.index');
     }
 
     /**

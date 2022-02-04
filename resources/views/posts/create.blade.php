@@ -45,6 +45,12 @@
                         <input required type="file" name="image" class="form-control" placeholder="Enter image">
                     </div>
                 </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Slug:</strong>
+                        <input required type="text" name="slug"  class="form-control" placeholder="Slug">
+                    </div>
+                </div>
                 <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                     <button type="submit" class="btn btn-primary">Submit</button>

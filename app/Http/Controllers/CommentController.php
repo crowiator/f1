@@ -52,7 +52,8 @@ class CommentController extends Controller
         $comment = auth()->user()->comments()->create(
             $request->all()
         );
-        return redirect('/posts/'.$comment->post->slug. '#comments');
+        return redirect('/posts/'.$comment->post->slug. '#comments')
+            ->with('flash', 'Comment was added');
     }
 
     /**

@@ -23,7 +23,7 @@
                                  src="{{ asset('public/image/post/'.$post->image) }}">
                             <div class="card-body">
                                 <h5 class="card-title">
-                                <a href="/posts/{{$post->slug }}">
+                                <a href="/posts/{{$post->id }}">
                                     {{$post->title}}
                                 </a>
                                 </h5>
@@ -36,7 +36,7 @@
                                         <strong>Author: {{$post->user->name}}</strong>
                                     </a>
                                     <!--  -->
-                                    <a href="/posts/{{$post->slug }}#comments" class="comments">
+                                    <a href="/posts/{{$post->id}}#comments" class="comments">
                                         {{$post->comments->count()}} <strong>{{ str_plural('comments',$post->comments->count()) }}</strong>
                                     </a>
 

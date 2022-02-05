@@ -1,0 +1,21 @@
+.logo{
+    max-width:9.375rem;
+    height: auto;
+}
+.navbar{
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+}
+.navbar,footer{
+    background-color: #ff3333;
+
+}
+a.nav-link:hover {
+    color: white;
+
+}
+a.nav-link {
+    text-decoration: none;
+    color: black;
+}

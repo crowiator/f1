@@ -91,6 +91,7 @@ class EventController extends Controller
      */
     public function update(Request $request, Event $event)
     {
+        $this->authorize('update',$event);
         $request->validate([
             'name' => 'required|min:2|',
             'place' => 'required|min:2',
@@ -125,6 +126,7 @@ class EventController extends Controller
      */
     public function destroy(Event $event)
     {
+        $this->authorize('delete',$event);
         $event->delete();
 
         return redirect()->route('events.index')

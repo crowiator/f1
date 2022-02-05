@@ -97,28 +97,33 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         //
-        $request->validate([
-            'title' => 'required|min:2|string',
-            'text' => 'required|min:2|string',
-            'slug' => 'required|min:2|string',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
-        ]);
+        $this->authorize('update',$post);
 
-        $input = $request->all();
+            $request->validate([
+                'title' => 'required|min:2|string',
+                'text' => 'required|min:2|string',
+                'slug' => 'required|min:2|string',
+                'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+            ]);
 
-        if ($image = $request->file('image')) {
-            $destinationPath = 'public/image/post/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-            $image->move($destinationPath, $profileImage);
-            $input['image'] = "$profileImage";
-        }else{
-            unset($input['image']);
-        }
+            $input = $request->all();
 
-        $post->update($input);
+            if ($image = $request->file('image')) {
+                $destinationPath = 'public/image/post/';
+                $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+                $image->move($destinationPath, $profileImage);
+                $input['image'] = "$profileImage";
+            } else {
+                unset($input['image']);
+            }
+
+            $post->update($input);
 
 
-        return redirect()->route('posts.index');
+            return redirect()->route('posts.index');
+
+
+
     }
 
     /**
@@ -130,6 +135,7 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         //
+        $this->authorize('delete',$post);
         $post->delete();
 
         return redirect()->route('posts.index');

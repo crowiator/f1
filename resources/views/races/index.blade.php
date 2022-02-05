@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-
     <!-- Modal -->
     <div class="modal fade" id="AddRaceModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -294,8 +293,8 @@
                             $('#success_message').html("");
                             $('#success_message').addClass('alert alert-success');
                             $('#success_message').text(response.message);
-                            $('.update_race').text("Update");
                             $('#EditRaceModal').modal('hide');
+                            $('.update_race').text("Update");
                             fetchrace();
                         }
                     }

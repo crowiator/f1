@@ -9,8 +9,13 @@
                     <a class="btn btn-primary" href="{{ route('events.index') }}"> Back</a>
                 </div>
             </div>
-            <div class="col-sm col-md-10">
-                <h1>{{ $event->name }}</h1>
+        </div>
+        <div class="row">
+            <h1>{{ $event->name }}</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm col-lg-6">
+
                 <table class="table table-borderless">
                     <tbody>
                     <tr>
@@ -33,11 +38,14 @@
                 <p>
                     {{ $event->description }}
                 </p>
+            </div>
+            <div class="col-sm col-lg-6">
                 <img class="img-fluid" alt="Responsive image" src="{{ asset('public/image/'.$event->image) }}">
             </div>
-
-
         </div>
+
+
+
 
     </div>
 

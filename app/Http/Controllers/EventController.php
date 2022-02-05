@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 
 class EventController extends Controller
 {
@@ -27,7 +28,14 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('events.create');
+        if (Gate::allows('isPub') || Gate::allows('isAdmin') ) {
+
+            return view('events.create');
+
+        } else {
+            return redirect()->route('events.index');
+        }
+
     }
 
     /**
@@ -79,7 +87,11 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        return view('events.edit',compact('event'));
+        if (Gate::allows('isPub') || Gate::allows('isAdmin') ) {
+            return view('events.edit', compact('event'));
+        }else{
+            return redirect()->route('events.index');
+        }
     }
 
     /**

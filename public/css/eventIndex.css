@@ -1,6 +1,7 @@
 h1 {
     font-weight: bold;
-    font-family: Papyrus;
+    font-family: Verdana;
+    color:#b32400;
     font-size: 4rem;
     text-align: center;
     padding-top: 2px;
@@ -8,4 +9,8 @@ h1 {
 .karta{
     padding-top: 1px;
     margin-top: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
 }

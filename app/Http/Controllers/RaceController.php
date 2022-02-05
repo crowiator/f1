@@ -17,6 +17,10 @@ class RaceController extends Controller
     {
         return view('races.index');
     }
+    public function indexForUser()
+    {
+        return view('races.indexUser');
+    }
 
     public function fetchrace()
     {

@@ -1,13 +1,16 @@
 @extends('layouts.app')
-<link rel="stylesheet" href="{{ asset('css/posts/index.css') }}">
+
 @section('content')
+    <link href="{{ asset('css/posts/index.css') }}" rel="stylesheet" >
     <div class="container">
         <div class="row">
+            @auth
             <div class="col-sm col-md-2">
                 <div>
                     <a class="btn btn-success" href="{{ route('posts.create') }}"> Create New Post</a>
                 </div>
             </div>
+            @endauth
             <div class="col-sm col-md-10">
                 <h1>Posts</h1>
             </div>
@@ -41,12 +44,19 @@
                                     </a>
 
                                 </div>
+
                                 <form action="{{ route('posts.destroy',$post->id) }}" method="POST">
                                     <a class="btn btn-info" href="{{ route('posts.show',$post->id) }}">Show</a>
-                                    <a class="btn btn-primary" href="{{ route('posts.edit',$post->id) }}">Edit</a>
+                                    @can('update', $post)
+                                        <a class="btn btn-primary" href="{{ route('posts.edit',$post->id) }}">Edit</a>
+                                    @endcan
+                                    @can('delete', $post)
+
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Delete</button>
+                                    @endcan
                                     @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Delete</button>
+
                                 </form>
                             </div>
                         </div>
@@ -58,7 +68,6 @@
                 @endforeach
         </div>
 
-    </div>
     </div>
 
 @endsection

@@ -1,21 +1,22 @@
 @extends('layouts.app')
+
 @section('content')
     <link href="{{ asset('css/evenEdit.css') }}" rel="stylesheet">
     <div class="container">
         <div class="row">
             <div class="col-sm col-md-1">
                 <div>
-                    <a class="btn btn-primary" href="{{ route('posts.index') }}"> Back</a>
+                    <a class="btn btn-primary" href="{{ route('drivers.index') }}"> Back</a>
                 </div>
             </div>
             <div class="col-sm col-md-10">
-                <h1>Edit Post</h1>
+                <h1>Add Driver</h1>
             </div>
         </div>
 
         @if ($errors->any())
             <div class="alert alert-danger">
-                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                <strong>Eroors</strong> There were some problems with your input.<br><br>
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
@@ -25,42 +26,38 @@
             </div>
         @endif
 
-
-
-
-
-
-
-
-
-        <form action="{{ route('posts.update',$post->id) }}" method="POST" enctype="multipart/form-data" >
+        <form action="{{ route('drivers.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            @method('PUT')
 
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Title:</strong>
-                        <input required type="text" name="title" value="{{ $post->title }}" class="form-control" placeholder="Title">
+                        <strong>Name:</strong>
+                        <input required type="text" name="name" class="form-control" placeholder="Enter Name">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Text:</strong>
-                        <textarea required class="form-control" style="height:150px" name="text" placeholder="Detail">{{ $post->text }}</textarea>
+                        <strong>Team:</strong>
+                        <input required type="text" name="team" class="form-control" placeholder="Enter Team">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Slug:</strong>
-                        <input required type="text" name="slug" value="{{ $post->slug }}" class="form-control" placeholder="Slug">
+                        <strong>State:</strong>
+                        <input required type="text" name="state" class="form-control" placeholder="Enter State">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                        <strong>Points:</strong>
+                        <input required type="number" step="0.01" name="points" class="form-control" placeholder="Enter Points">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Image:</strong>
-                        <input  type="file" name="image" class="form-control" placeholder="image">
-                        <img class="img-fluid" alt="Responsive image" src="{{ asset('public/image/post/'.$post->image) }}" >
+                        <input required type="file" name="image" class="form-control" placeholder="Enter image">
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
@@ -71,3 +68,4 @@
         </form>
     </div>
 @endsection
+

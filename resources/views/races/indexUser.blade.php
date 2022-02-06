@@ -1,14 +1,14 @@
 @extends('layouts.app')
 @section('content')
-
+    <link href="{{ asset('css/eventIndex.css') }}" rel="stylesheet">
     <div class="container py 5">
         <div class="row">
             <div class="col-md-12">
                 <div id="success_message">
 
                 </div>
-                <h4>Races
-                </h4>
+                <h1>Races
+                </h1>
                 <div class="card-body">
                     <table class="table-responsive-sm table table-bordered table-striped">
                         <thead>

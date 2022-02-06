@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Gate;
 
 class PostController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *

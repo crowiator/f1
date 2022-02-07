@@ -1,32 +1,11 @@
 
-@charset "utf-8";
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Open Sans:400,600,800');
-h2,
-h3,
-h4,
-h5,
-h6,
-div,
-input,
-p,
-a {
+
+p, a {
     font-family: "Open Sans";
     margin: 0px;
 }
-
-
-
-
-
-
-.card-container {
-    padding: 100px 0px;
-    -webkit-perspective: 1000;
-    perspective: 1000;
-}
-
-
-
 
 .profile-card-4 {
     max-width: 300px;
@@ -114,5 +93,7 @@ a{
     text-decoration: none;
     color: black;
 }
+
+
 
 

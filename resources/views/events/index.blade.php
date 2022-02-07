@@ -4,7 +4,7 @@
     <link href="{{ asset('css/eventIndex.css') }}" rel="stylesheet">
     <div class="container">
         <div class="row">
-           @can('isPub')
+            @can('isPub')
             <div class="col-sm col-md-2">
                 <div>
                     <a class="btn btn-success" href="{{ route('events.create') }}"> Create New Event</a>
@@ -33,7 +33,7 @@
 
         <div class="row">
             @foreach ($data as $key => $value)
-                <div class="col-md-6 col-lg-4 ">
+                <div class="col-md-6 col-lg-4 karta ">
                     <div class="card" >
                         <div class="card-body">
                             <h3 class="card-title">{{ $value->name }}</h3>

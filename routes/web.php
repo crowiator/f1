@@ -16,7 +16,8 @@ use App\Http\Controllers\DriverController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Route::get(' events/create',[EventController::class, 'create'])->middleware('can:isAdmin')->name(' events.create');
+//Route::get(' events/create',[EventController::class, 'create'])->middleware('can:isPub')->name(' events.create');
 Route::get('drivers/standings', [App\Http\Controllers\DriverController::class, 'standings'])->name('drivers.standings');
 Route::resource('events', EventController::class);
 Route::resource('posts', \App\Http\Controllers\PostController::class);

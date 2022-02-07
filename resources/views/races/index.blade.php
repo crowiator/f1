@@ -50,7 +50,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Race</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Edit  Race</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -220,6 +220,7 @@
                 e.preventDefault();
                 var race_id = $(this).val(); //value=item.id
                 //console.log(race_id);
+                $('#updateForm_errList').html("");
                 $('#EditRaceModal').modal('show');
                 $.ajax({
                     type: 'GET',
@@ -281,6 +282,7 @@
                                 $('#updateForm_errList').append('<li>' + err_values + '</li>');
                             });
                             $('.update_race').text("Update");
+
                         } else if(response.status == 404){
                             $('#updateForm_errList').html("");
                             $('#success_message').addClass('alert alert-success');
@@ -330,6 +332,7 @@
                             //prida zoznam chyb
                             $('#saveForm_errList').html("");
                             $('#saveForm_errList').addClass('alert alert-danger');
+                            //vypise chyby
                             $.each(response.errors, function (key, err_values) {
                                 $('#saveForm_errList').append('<li>' + err_values + '</li>');
                             });

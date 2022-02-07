@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Race;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Validator;
 
 class RaceController extends Controller
@@ -15,7 +16,13 @@ class RaceController extends Controller
      */
     public function index()
     {
-        return view('races.index');
+        if (Gate::allows('isAdmin') ) {
+            return view('races.index');
+        }else{
+            return view('races.indexUser');
+        }
+
+
     }
     public function indexForUser()
     {
@@ -54,14 +61,17 @@ class RaceController extends Controller
             'circle' => 'required|min:2|max:300',
             'date' => 'required|after:today',
             'time' => 'required',
+            'winner' => 'required',
 
         ]);
         if ($validator->fails()) {
             return response()->json([
                 'status' => 400,
+                //posielam chyby
                 'errors' => $validator->messages(),
             ]);
         } else {
+            //model
             $race = new Race;
             $race->name = $request->input('name');
             $race->place = $request->input('place');
@@ -131,6 +141,7 @@ class RaceController extends Controller
             'circle' => 'required|min:2|max:300',
             'date' => 'required|after:today',
             'time' => 'required',
+            'winner' => 'required',
 
         ]);
 

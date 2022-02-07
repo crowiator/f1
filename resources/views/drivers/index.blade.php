@@ -2,12 +2,13 @@
 
 @section('content')
     <link href="{{ asset('css/drivers/index.css') }}" rel="stylesheet">
+
     <div class="container">
         <div class="row">
             @can('isAdmin')
                 <div class="col-sm col-md-2">
                     <div>
-                        <a class="btn btn-success" href="{{ route('drivers.create') }}"> Create New Post</a>
+                        <a class="btn btn-success" href="{{ route('drivers.create') }}"> Create New Driver</a>
                     </div>
                 </div>
             @endcan
@@ -15,6 +16,7 @@
                 <h1>Drivers</h1>
             </div>
         </div>
+
 
 
         <div class="py-4 row">

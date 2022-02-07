@@ -57,7 +57,7 @@
                             <a href="#" class="nav-link dropdown-toggle"  id="navbarDropdownStandings" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Standings
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul  class="dropdown-menu" >
                                 <li><a class="dropdown-item" href="{{route('drivers.standings')}}">Driver Standings</a></li>
                                 <li><a class="dropdown-item" href="{{ route('teams.index') }}">Team Standings</a></li>
                             </ul>

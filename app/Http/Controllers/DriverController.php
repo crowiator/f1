@@ -16,7 +16,7 @@ class DriverController extends Controller
         //
         return view('drivers.index',[
             // od najnovsieho podla casu vytvorenia
-            'drivers' => Driver::latest()->get(),
+            'drivers' => Driver::orderBy('points','desc')->get(),
         ]);
     }
 

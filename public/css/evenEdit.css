@@ -5,3 +5,8 @@ h1 {
     text-align: center;
     padding-top: 2px;
 }
+a{
+    text-decoration: none;
+    font-style: italic;
+    color: black;
+}

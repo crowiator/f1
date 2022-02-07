@@ -1,9 +1,25 @@
 h1{
-    text-align: center;
+    text-align: left;
     color: #cc2900;
     font-weight: bold;
+    margin-bottom: 12px;
 }
-strong{
+strong {
     text-decoration: none;
+    color: #800000;
+}
+
+.col-md-7, strong:hover,a:hover{
+    text-decoration: none;
+    color: black;
+}
+p{
+    font-style: normal;
+    font-family: "Times New Roman ";
+    font-size: 1rem;
+}
+a{
+    text-decoration: none;
+    font-style: italic;
     color: black;
 }

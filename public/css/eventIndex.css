@@ -9,8 +9,11 @@ h1 {
 .karta{
     padding-top: 1px;
     margin-top: 10px;
+    padding-bottom: 5px;
 }
 a{
     text-decoration: none;
+    font-style: italic;
     color: black;
 }
+

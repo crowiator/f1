@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Open Sans:400,600,800');
 
-p, a {
+p {
     font-family: "Open Sans";
     margin: 0px;
 }
@@ -28,27 +28,11 @@ p, a {
     background-color: #FFF;
 }
 
-.profile-card-4 .profile-name {
-    font-weight: bold;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: -70px;
-    color: #FFF;
-    font-size: 17px;
-}
 
-.profile-card-4 .profile-name p {
-    font-weight: 600;
-    font-size: 13px;
-    letter-spacing: 1.5px;
-}
 
-.profile-card-4 .profile-description {
-    color: #777;
-    font-size: 12px;
-    padding: 10px;
-}
+
+
+
 
 .profile-card-4 .profile-overview {
     padding: 15px 0px;
@@ -91,8 +75,10 @@ h1 {
 }
 a{
     text-decoration: none;
+    font-style: italic;
     color: black;
 }
+
 
 
 

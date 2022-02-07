@@ -1,6 +1,6 @@
 h1 {
     font-weight: bold;
-    font-family: Verdana;
+    font-family: 'Arial';
     color:#b32400;
     font-size: 4rem;
     text-align: center;
@@ -15,5 +15,11 @@ a{
     text-decoration: none;
     font-style: italic;
     color: black;
+}
+.nazovTabulky{
+    font-weight: bold;
+}
+h5{
+    font-weight: bold;
 }
 

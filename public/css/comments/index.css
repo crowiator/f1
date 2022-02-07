@@ -16,3 +16,10 @@
 .bootdeys{
     margin-top: 1.5rem;
 }
+.media-body{
+    font-size: 0.9rem;
+}
+.media-body > p {
+    font-size: 1.2rem;
+    font-family: Arial;
+}
